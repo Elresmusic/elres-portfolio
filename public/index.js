@@ -64,7 +64,6 @@ $(document).ready(function(){
         }
     });
     
-
     AOS.init({
         easing: "ease",
         dalay: 200,

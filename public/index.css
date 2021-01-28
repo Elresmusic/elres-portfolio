@@ -60,7 +60,7 @@ section .title{
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 10px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 section .title::before{
     content: "";
@@ -89,7 +89,7 @@ section .title::after{
     width: 100%;
     z-index: 999;
     padding: 15px 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
 }
 .navbar.sticky{
@@ -183,7 +183,7 @@ section .title::after{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .home .max-width{
