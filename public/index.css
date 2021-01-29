@@ -182,7 +182,8 @@ section .title::after{
 .home{
     display: flex;
     background: url("img/header.jpg") no-repeat center;
-    height: 100vh;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     color: var(--bg-white);
     min-height: 500px;
     min-width: 380;
@@ -628,7 +629,8 @@ footer span a:hover{
     }
     .navbar .menu{
         position: fixed;
-        height: 100vh;
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
         width: 100%;
         left: -100%;
         top: 0;
