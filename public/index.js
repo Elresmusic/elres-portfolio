@@ -37,8 +37,8 @@ $(document).ready(function(){
     // typing text animation script
     var typed = new Typed(".typing", {
         strings: ["prod. by", "", "mixed by", "", "master by", "79", ""],
-        typeSpeed: 100,
-        backSpeed: 60,
+        typeSpeed: 20,
+        backSpeed: 10,
         loop: true
     });
 
