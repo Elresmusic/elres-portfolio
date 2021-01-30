@@ -81,8 +81,8 @@ $(document).ready(function(){
       };
     
     if (mobileCheck()==true) {
-        console.log( ((window.innerHeight+100)/(window.innerWidth*2103/2756)*100).toFixed(2) + "%" )
-        $('.background_wrap').css("background-size" ,  ((window.innerHeight+100)/(window.innerWidth*2103/2756)*100).toFixed(2) + "%" );
+        console.log( ((window.innerHeight+100).toFixed(0) + "px ") + (((window.innerHeight+100)*2756/2103).toFixed(0) + "px ") )
+        $('.background_wrap').css("background-size" , (((window.innerHeight+100)*2756/2103).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
     };
 
 

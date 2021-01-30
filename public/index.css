@@ -186,7 +186,7 @@ section .title::after{
     position: fixed;
     height: 2103px;
     width: 2756px;
-    background-size: 288.31%;
+    background-size: 1442px 1100px;
     background-image: url("img/header.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
