@@ -89,16 +89,70 @@ $(document).ready(function(){
     function initBg() {
         $('.background_wrap').css("height" , getBg().height + "px")
         $('.background_wrap').css("width" , getBg().width + "px")
+        
+        if (mobileCheck()==true) {
+            if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
+                $('.background_wrap').css("background-size" , ((window.innerWidth+100).toFixed(0) + "px ") + (( (window.innerWidth+100)*getBg().height/getBg().width).toFixed(0) + "px") );
+            }else{
+                $('.background_wrap').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
+            }
+            initWitdth = window.innerWidth
+            initHeight = window.innerHeight
+        }else{
+            if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
+                $('.background_wrap').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
+            }else{
+                $('.background_wrap').css("background-size" , (((window.innerHeight)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight).toFixed(0) + "px") );
+            }
+            initWitdth = window.innerWidth
+            initHeight = window.innerHeight
+        }
+
+    }
+
+    // window.resize event listener
+    window.addEventListener('resize', function() {
+        
+        if (mobileCheck()==true) {
+            if (initWitdth!==window.innerWidth){
+                if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
+                    $('.background_wrap').css("background-size" , ((window.innerWidth+100).toFixed(0) + "px ") + (( (window.innerWidth+100)*getBg().height/getBg().width).toFixed(0) + "px") );
+                }else{
+                    $('.background_wrap').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
+                }
+                initWitdth = window.innerWidth
+                initHeight = window.innerHeight
+            }
+        }else{
+            if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
+                $('.background_wrap').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
+            }else{
+                $('.background_wrap').css("background-size" , (((window.innerHeight)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight).toFixed(0) + "px") );
+            }
+            initWitdth = window.innerWidth
+            initHeight = window.innerHeight
+        }
+
+    });
+
+    var initWitdth = window.innerWidth
+    var initHeight = window.innerHeight
+  
+    initBg()
+
+
+
+    /*
+    function initBg() {
+        $('.background_wrap').css("height" , getBg().height + "px")
+        $('.background_wrap').css("width" , getBg().width + "px")
         if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
             $('.background_wrap').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
         }else{
             $('.background_wrap').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
         }
     }
-
-    initBg()
-    
-    /*height: 2103px;
+    height: 2103px;
     width: 2756px;
     background-size: 1442px 1100px;
 
@@ -107,10 +161,28 @@ $(document).ready(function(){
         $('.background_wrap').css("background-size" , (((window.innerHeight+100)*2756/2103).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
     };
 
-
+    
     // window.resize event listener
     window.addEventListener('resize', function() {
-        if (mobileCheck()==true) {console.log("asiugf")}
+        if (mobileCheck()==true) {
+            if (initWitdth!==window.innerWidth){
+                if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
+                    $('.background_wrap').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
+                }else{
+                    $('.background_wrap').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
+                }
+                initWitdth = window.innerWidth
+                initHeight = window.innerHeight
+            }
+        }else{
+            if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
+                $('.background_wrap').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
+            }else{
+                $('.background_wrap').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
+            }
+            initWitdth = window.innerWidth
+            initHeight = window.innerHeight
+        }
     });
     */
 
