@@ -44,6 +44,7 @@ $(document).ready(function(){
 
     // owl carousel script
     var owl = $('.owl-carousel');
+
     owl.owlCarousel({
         margin: 20,
         loop: false,
@@ -70,7 +71,7 @@ $(document).ready(function(){
         dalay: 200,
         duration: 1200,
         once: false,
-    })
+    });
 
 
     
@@ -78,7 +79,7 @@ $(document).ready(function(){
         var img = new Image();
         img.src = $('.background_wrap').css("background-image").slice(5, -2);
         return img
-    }
+    };
 
     function mobileCheck() {
         let check = false;
@@ -108,7 +109,7 @@ $(document).ready(function(){
             initHeight = window.innerHeight
         }
 
-    }
+    };
 
     // window.resize event listener
     window.addEventListener('resize', function() {
@@ -135,10 +136,10 @@ $(document).ready(function(){
 
     });
 
-    var initWitdth = window.innerWidth
-    var initHeight = window.innerHeight
+    var initWitdth = window.innerWidth;
+    var initHeight = window.innerHeight;
   
-    initBg()
+    initBg();
 
 
 });
