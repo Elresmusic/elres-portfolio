@@ -73,6 +73,12 @@ $(document).ready(function(){
     })
 
 
+    
+    function getBg(url) {
+        var img = new Image();
+        img.src = $('.background_wrap').css("background-image").slice(5, -2);
+        return img
+    }
 
     function mobileCheck() {
         let check = false;
@@ -80,6 +86,22 @@ $(document).ready(function(){
         return check;
       };
     
+    function initBg() {
+        $('.background_wrap').css("height" , getBg().height + "px")
+        $('.background_wrap').css("width" , getBg().width + "px")
+        if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
+            $('.background_wrap').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
+        }else{
+            $('.background_wrap').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
+        }
+    }
+
+    initBg()
+    
+    /*height: 2103px;
+    width: 2756px;
+    background-size: 1442px 1100px;
+
     if (mobileCheck()==true) {
         console.log( ((window.innerHeight+100).toFixed(0) + "px ") + (((window.innerHeight+100)*2756/2103).toFixed(0) + "px ") )
         $('.background_wrap').css("background-size" , (((window.innerHeight+100)*2756/2103).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
@@ -90,7 +112,7 @@ $(document).ready(function(){
     window.addEventListener('resize', function() {
         if (mobileCheck()==true) {console.log("asiugf")}
     });
-
+    */
 
 
 

@@ -184,13 +184,11 @@ section .title::after{
 .background_wrap{
     z-index: -1;
     position: fixed;
-    height: 2103px;
-    width: 2756px;
-    background-size: 1442px 1100px;
     background-image: url("img/header.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: 1442px 1100px;
 }
 
 .home{
