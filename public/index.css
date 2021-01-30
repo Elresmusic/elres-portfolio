@@ -190,7 +190,7 @@ section .title::after{
     background-image: url("img/header.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
 }
 
 .home{
