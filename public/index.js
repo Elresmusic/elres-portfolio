@@ -55,7 +55,7 @@ $(document).ready(function(){
                 items: 1,
                 nav: false
             },
-            600:{
+            700:{
                 items: 2,
                 nav: false
             },
@@ -69,7 +69,7 @@ $(document).ready(function(){
     AOS.init({
         easing: "ease",
         dalay: 200,
-        duration: 1200,
+        duration: 1000,
         once: false,
     });
 
@@ -77,7 +77,7 @@ $(document).ready(function(){
     
     function getBg(url) {
         var img = new Image();
-        img.src = $('.background_wrap').css("background-image").slice(5, -2);
+        img.src = $('.background-container').css("background-image").slice(5, -2);
         return img
     };
 
@@ -88,22 +88,26 @@ $(document).ready(function(){
       };
     
     function initBg() {
-        $('.background_wrap').css("height" , getBg().height + "px")
-        $('.background_wrap').css("width" , getBg().width + "px")
+        $('.background-container').css("height" , getBg().height + "px")
+        $('.background-container').css("width" , getBg().width + "px")
         
         if (mobileCheck()==true) {
+            $('.background-container').css("background-position", "center top")
+            //background-position: center top;
             if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
-                $('.background_wrap').css("background-size" , ((window.innerWidth+100).toFixed(0) + "px ") + (( (window.innerWidth+100)*getBg().height/getBg().width).toFixed(0) + "px") );
+                $('.background-container').css("background-size" , ((window.innerWidth+100).toFixed(0) + "px ") + (( (window.innerWidth+100)*getBg().height/getBg().width).toFixed(0) + "px") );
             }else{
-                $('.background_wrap').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
+                $('.background-container').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
             }
             initWitdth = window.innerWidth
             initHeight = window.innerHeight
         }else{
+            $('.background-container').css("background-position", "center center")
+            //background-position: center top;
             if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
-                $('.background_wrap').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
+                $('.background-container').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
             }else{
-                $('.background_wrap').css("background-size" , (((window.innerHeight)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight).toFixed(0) + "px") );
+                $('.background-container').css("background-size" , (((window.innerHeight)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight).toFixed(0) + "px") );
             }
             initWitdth = window.innerWidth
             initHeight = window.innerHeight
@@ -117,18 +121,18 @@ $(document).ready(function(){
         if (mobileCheck()==true) {
             if (initWitdth!==window.innerWidth){
                 if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
-                    $('.background_wrap').css("background-size" , ((window.innerWidth+100).toFixed(0) + "px ") + (( (window.innerWidth+100)*getBg().height/getBg().width).toFixed(0) + "px") );
+                    $('.background-container').css("background-size" , ((window.innerWidth+100).toFixed(0) + "px ") + (( (window.innerWidth+100)*getBg().height/getBg().width).toFixed(0) + "px") );
                 }else{
-                    $('.background_wrap').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
+                    $('.background-container').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
                 }
                 initWitdth = window.innerWidth
                 initHeight = window.innerHeight
             }
         }else{
             if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
-                $('.background_wrap').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
+                $('.background-container').css("background-size" , ((window.innerWidth).toFixed(0) + "px ") + (( (window.innerWidth)*getBg().height/getBg().width).toFixed(0) + "px") );
             }else{
-                $('.background_wrap').css("background-size" , (((window.innerHeight)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight).toFixed(0) + "px") );
+                $('.background-container').css("background-size" , (((window.innerHeight)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight).toFixed(0) + "px") );
             }
             initWitdth = window.innerWidth
             initHeight = window.innerHeight
@@ -140,7 +144,6 @@ $(document).ready(function(){
     var initHeight = window.innerHeight;
   
     initBg();
-
 
 });
 
