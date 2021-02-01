@@ -146,7 +146,7 @@
     padding: 100px 0;
 }
 .home .home-container{
-    margin: auto 0 auto 30px;
+    margin: auto 0 auto 80px;
     max-width: 1600px;
     padding: 0 80px;
 }
@@ -193,7 +193,7 @@
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 60px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 .master .title::before{
@@ -209,7 +209,7 @@
 .master .title::after{
     color: var(--highlight-color);
     background: var(--bg-darker);
-    content: "Letzte Projekte";
+    content: "Projekte";
     position: absolute;
     bottom: -11px;
     left: 50%;
@@ -284,15 +284,48 @@
     background: var(--highlight-color)!important;
 }
 
+/* promo section styling */
 
-
-
-
-
-
-
-
-
+.promo{
+    padding: 100px 0;
+    color:var(--bg-white);
+    background: var(--bg-darker);
+}
+.promo .promo-container{
+    margin: auto;
+    max-width: 1600px;
+    padding: 0 80px;
+}
+.promo .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.promo .title::before{
+    background: var(--bg-white);
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 300px;
+    height: 3px;
+    transform: translateX(-50%);
+}
+.promo .title::after{
+    color: var(--highlight-color);
+    background: var(--bg-darker);
+    content: "79 Fam";
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    font-size: 20px;
+    padding: 0 5px;
+    transform: translateX(-50%);
+}
 
 /* footer section styling */
 footer{
@@ -308,9 +341,6 @@ footer span a{
 footer span a:hover{
     text-decoration: underline;
 }
-
-
-
 
 /* responsive media query start */
 @media (max-width: 1300px) {
@@ -330,6 +360,7 @@ footer span a:hover{
         padding: 0 50px;
     }
 }
+
 @media (max-width: 947px){
     .menu-btn{
         display: block;
@@ -369,36 +400,27 @@ footer span a:hover{
     .home .home-content a{
         font-size: 40px;
     }
-
-
     .navbar .navbar-container{
         max-width: 930px;
     }
-
-
     .home .home-container{
         max-width: 930px;
     }
-    
     .master .master-container{
         max-width: 930px;
     }
 }
 
 @media (max-width: 870px) {
-    
     .home .home-container{
         margin-bottom: 35px;
     }
-
 }
 
 @media (max-width: 690px) {
-    
     .navbar .navbar-container{
         padding: 0 23px;
     }
-
     .home .home-container{
         padding: 0 23px;
     }
@@ -411,16 +433,12 @@ footer span a:hover{
     .home .home-content a{
         font-size: 35px;
     }
-
-    
     .master .master-container{
         padding: 0 23px;
     }
-
 }
 
 @media (max-width: 500px) {
-
     .home .home-content .text-1{
         font-size: 27px;
     }
@@ -438,5 +456,4 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
-
 }

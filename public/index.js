@@ -95,9 +95,9 @@ $(document).ready(function(){
             $('.background-container').css("background-position", "center top")
             //background-position: center top;
             if (window.innerWidth/window.innerHeight > getBg().width/getBg().height){
-                $('.background-container').css("background-size" , ((window.innerWidth+100).toFixed(0) + "px ") + (( (window.innerWidth+100)*getBg().height/getBg().width).toFixed(0) + "px") );
+                $('.background-container').css("background-size" , ((window.innerWidth+120).toFixed(0) + "px ") + (( (window.innerWidth+120)*getBg().height/getBg().width).toFixed(0) + "px") );
             }else{
-                $('.background-container').css("background-size" , (((window.innerHeight+100)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+100).toFixed(0) + "px") );
+                $('.background-container').css("background-size" , (((window.innerHeight+120)*getBg().width/getBg().height).toFixed(0) + "px ") + ((window.innerHeight+120).toFixed(0) + "px") );
             }
             initWitdth = window.innerWidth
             initHeight = window.innerHeight
