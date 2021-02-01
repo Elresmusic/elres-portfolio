@@ -293,8 +293,8 @@
 }
 .promo .promo-container{
     margin: auto;
-    max-width: 1600px;
-    padding: 0 80px;
+    max-width: 1200px;
+    padding: 0px 80px;
 }
 .promo .title{
     position: relative;
@@ -326,8 +326,20 @@
     padding: 0 5px;
     transform: translateX(-50%);
 }
+.promo-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:-75px ;
+    text-align: center;
+}
+.promo-content p{
+    padding: 5px;
+}
 
 /* footer section styling */
+
 footer{
     background: var(--bg-darker);
     padding: 15px 23px;
