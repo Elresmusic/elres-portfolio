@@ -34,6 +34,11 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     });
 
+
+    $('.promo-content .iframe-container .overlay').mouseover(function() {
+        $('.promo-content .iframe-container .overlay').hide();
+    });
+
     // typing text animation script
     var typed = new Typed(".typing", {
         strings: ["prod. by", "", "mixed by", "", "master by", "79", ""],
