@@ -112,6 +112,7 @@ $(document).ready(function(){
             initWitdth = window.innerWidth
             initHeight = window.innerHeight
         }
+        $('.background-container').css("background-image", "url('img/header.jpg')")
 
     };
 
