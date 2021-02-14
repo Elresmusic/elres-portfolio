@@ -333,7 +333,7 @@
     justify-content: center;
     margin-bottom:-75px ;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     overflow: hidden;
 }
 .promo-content .iframe-container{
@@ -349,16 +349,15 @@
     width: 100%;
     height: 100%;
 }
-
+/*
 .promo-content .iframe-container .overlay{
-    /*background-image:url(http://i.ytimg.com/vi/EhG0YCaVC3Y/hqdefault.jpg);*/
-    background-image:url(https://scontent-frt3-2.cdninstagram.com/v/t51.2885-15/e35/145201646_110893634312223_78043729545643226_n.jpg?_nc_ht=scontent-frt3-2.cdninstagram.com&_nc_cat=103&_nc_ohc=AU8uUH8ZU7UAX8WzbyX&tp=1&oh=60299d919315f32f4acb134b0567ce09&oe=602BBDA5);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color:  black;
+    display: block;
 }
-
+*/
 /* footer section styling */
 
 footer{
