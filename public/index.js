@@ -5,6 +5,7 @@ $(document).ready(function(){
     .waitForImages(function() {
       console.log('Background image done loading');
       // This *does* work
+        initBg();
     }, $.noop, true);
 
     $(window).scroll(function(){
@@ -155,7 +156,6 @@ $(document).ready(function(){
     var initWitdth = window.innerWidth;
     var initHeight = window.innerHeight;
   
-    initBg();
 
     //$('.background-container').css("background-image", "url('img/header.jpg')")
 
