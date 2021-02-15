@@ -1,5 +1,12 @@
 $(document).ready(function(){
     
+    $('.background-container')
+    .css('background-image','url("img/header.jpg")')
+    .waitForImages(function() {
+      console.log('Background image done loading');
+      // This *does* work
+    }, $.noop, true);
+
     $(window).scroll(function(){
         // sticky navbar on scroll script
         if(this.scrollY > 20){
@@ -117,7 +124,6 @@ $(document).ready(function(){
             initWitdth = window.innerWidth
             initHeight = window.innerHeight
         }
-        $('.background-container').css("background-image", "url('img/header.jpg')")
 
     };
 
@@ -150,6 +156,10 @@ $(document).ready(function(){
     var initHeight = window.innerHeight;
   
     initBg();
+
+    //$('.background-container').css("background-image", "url('img/header.jpg')")
+
+
 
 });
 
